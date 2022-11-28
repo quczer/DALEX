@@ -50,7 +50,7 @@ def predict_on_subsets(
     observation: pd.DataFrame,
     data: pd.DataFrame,
     predict_function: Callable[[np.ndarray], np.ndarray],
-    approx_samples: int = 20,
+    approx_samples: int,
 ) -> np.ndarray:
     """Make predictions using different subsets of features
     feature_subsets is a (`num_samples` x `num_features`) True/False matrix
@@ -123,6 +123,7 @@ def unbiased_kernel_shap(
         observation=new_observation,
         data=explainer.data,
         predict_function=explainer.predict,
+        approx_samples=20
     )
 
     welford_state = WelfordState()
