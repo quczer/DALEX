@@ -97,7 +97,6 @@ def calculate_exact_result(
     assert (num_features,) == b.shape
 
     A_inv = np.linalg.solve(A, np.eye(num_features))
-    # TODO: they do not use null prediction for some reason
     betas = A_inv @ (b - ((A_inv @ b).sum() - full_prediction + null_prediction) / A_inv.sum())
 
     std = np.ones(num_features) * np.nan  # TODO: add actual compute
