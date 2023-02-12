@@ -26,7 +26,7 @@
 ### dataset
 - wymyslić/znaleźć spoko syntetyczny dataset
 
-# NEW - reszte jebać xd
+# NEW 
 
 ## edek
 - naklepać `scripts.run_explanation_experiments`
